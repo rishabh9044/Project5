@@ -66,26 +66,26 @@ int getNeighbors(vector<vector<int>> &board,int i,int j)
 	/*for (int i = 0; i < board.size(); i++) {
 		for (int j = 0; j < board[i].size(); j++) {*/
 			//sum = 0;
-			if (i - 1 >= 0)
-			{
-				if (j - 1 >= 0)
-					sum += (abs(board.at(i - 1).at(j - 1)) == 1 ? 1 : 0);
-				sum += (abs(board.at(i - 1).at(j)) == 1 ? 1 : 0);
-				if (j + 1 < board[i].size())
-					sum += (abs(board.at(i - 1).at(j + 1)) == 1 ? 1 : 0);
-			}
-			if ((j - 1) >= 0)
-				sum += (abs(board.at(i).at(j - 1)) == 1 ? 1 : 0);
-			if (j + 1 < board[i].size())
-				sum += (abs(board.at(i).at(j + 1)) == 1 ? 1 : 0);
-			if (i + 1 < board.size())
-			{
-				if (j - 1 >= 0)
-					sum += (abs(board.at(i + 1).at(j - 1)) == 1 ? 1 : 0);
-				sum += (abs(board.at(i + 1).at(j)) == 1 ? 1 : 0);
-				if (j + 1 < board[i].size())
-					sum += (abs(board.at(i + 1).at(j + 1)) == 1 ? 1 : 0);
-			}
+	if (i - 1 >= 0)
+	{
+		if (j - 1 >= 0)
+			sum += (abs(board.at(i - 1).at(j - 1)) == 1 ? 1 : 0);
+		sum += (abs(board.at(i - 1).at(j)) == 1 ? 1 : 0);
+		if (j + 1 < board[i].size())
+			sum += (abs(board.at(i - 1).at(j + 1)) == 1 ? 1 : 0);
+	}
+	if ((j - 1) >= 0)
+		sum += (abs(board.at(i).at(j - 1)) == 1 ? 1 : 0);
+	if (j + 1 < board[i].size())
+		sum += (abs(board.at(i).at(j + 1)) == 1 ? 1 : 0);
+	if (i + 1 < board.size())
+	{
+		if (j - 1 >= 0)
+			sum += (abs(board.at(i + 1).at(j - 1)) == 1 ? 1 : 0);
+		sum += (abs(board.at(i + 1).at(j)) == 1 ? 1 : 0);
+		if (j + 1 < board[i].size())
+			sum += (abs(board.at(i + 1).at(j + 1)) == 1 ? 1 : 0);
+	}
 	return sum;
 }
 int main()
